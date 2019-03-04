@@ -18,14 +18,24 @@
      				<a href="#" class="main-navigation_link">КАРТА ШТАТА</a>
      			</li>
      			<li>
-     				<a href="#" class="main-navigation_link">ГОСТИНИЦЫ</a>
+     				<a href="inner.html" class="main-navigation_link">ГОСТИНИЦЫ</a>
      			</li>
      		</ul>
+        </nav>
      		<div class="main-header_logo-container">
-     			<a href="#" class="main-header_logo" title="Главная страница"></a>
+     			<a href="#" class="main-header_logo" title="Главная страница">
+                <object data="img/logo.svg" type="image/svg+xml" width="138" height="70" style="pointer-events: none;"></object>        
+                </a>
      		</div>
-     	</nav>
      </header>
+
+     <div class="intro">
+            <div class="intro__slogan">
+                <img src="img/text-intro_welcome_to.svg" class="intro_greating" alt="welcome to the gorgeous">
+                <img src="img/text-intro_sedona.svg" class="intro_name" alt="Седона">
+                <img src="img/text-intro_because_the.svg" class="intro_caption" alt="Потому что Большой коньон отстой!">
+            </div>
+        </div>
 
      <section class="main-contant"> <!-- введение -->
      	<div class="main-contant_introduction">
@@ -39,7 +49,52 @@
      		<div class="hotels_title-shell">
      			<h1 class="hotels_title">ЗАИНТЕРЕСОВАЛИСЬ?</h1>
      			<p class="hotels_instruction">Укажите предполагаемые даты поездки и мы покажем вам лучшие предложения гостиниц в седоне</p>
-     			<!-- дальше должны идти форма и регистрация -->
+     			<form class="search-form" action="inner.html" method="get">
+                    <button class="search-form_btn-search" id="btn-search">ПОИСК ГОСТИНИЦЫ В седоне</button>
+                    <div class="search-form_wrapper" id="search-hotels">
+                        <div class="search-form_lab-wrapper">
+                            <label class="search-form_lab-label" for="date-lab">Дата заезда:</label>
+                            <input id="date-lab" class="search-form_lab" type="text" placeholder="28 февраля 2019" required>
+                            <button class="search-form_lab-calendar" id="lab-calendar">
+                                
+                            </button>
+                        </div>
+                        <div class="search-form_exit-wrapper">
+                            <label class="search-form_exit-label" for="date-exit">Дата Выезда:</label>
+                            <input id="date-exit" class="search-form_exit" type="text" placeholder="4 июля 2014" required>
+                            <button class="search-form_exit-calendar" id="exit-calendar">
+                                
+                            </button>
+                        </div>
+                        <div class="search-form_visiters">
+                            <div class="search-form_adult-wrapper">
+                                <label for="adult" class="search-form_adult-label">ВзрослыЕ:</label>
+                                <div class="search-form_adult">
+                                    <button id="adult-minus" class="search-form_adult-minus">
+                                        
+                                    </button>
+                                    <input id="adult" class="search-form_adult-counter" type="number" value="0" min="0">
+                                    <button id="adult-plus" class="search-form_adult-plus">
+                                        
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="search-form_kids-wrapper">
+                                <label for="kids" class="search-form_kids-label">ДетИ:</label>
+                                <div class="search-form_kids">
+                                    <button id="kids-minus" class="search-form_kids-minus">
+                                        
+                                    </button>
+                                    <input id="kids" class="search-form_kids-counter" type="number" value="2" min="0">
+                                    <button id="kids-plus" class="search-form_kids-plus">
+                                        
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="search-form_btn-find" id="btn-find" type="submit">НАЙТИ</button>
+                    </div>
+                </form><!-- дальше должны идти форма и регистрация -->
      		</div>
      	</div>
      </section>
