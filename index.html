@@ -8,16 +8,22 @@
   </head>
   <body>
      <header class="main-header">
-     	<nav class="main-navigation"> <!--Навигация -->
-     		<ul class="main-navigation_list">
+     	<nav class="main-navigation" id="main-nav"> <!--Навигация -->
+            <button class="main-navigation_togle-close" id="cross">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="22.199px" height="22.199px" viewBox="0 0 22.199 22.199" enable-background="new 0 0 22.199 22.199" xml:space="preserve" fill="currentColor">
+                        <polygon points="22.199,2.804 19.396,0 11.1,8.297 2.804,0 0,2.803 8.297,11.1 0,19.396 2.803,22.199 11.1,13.902 19.396,22.199 
+                22.199,19.396 13.903,11.1 " />
+                </svg>
+            </button>
+     		<ul class="main-navigation_list" id="main-nav">
      			<li>
-     				<a href="#" class="main-navigation_link">ИНФОРМАЦИЯ</a>
+     				<a href="#" class="main-navigation_link active">ИНФОРМАЦИЯ</a>
      			</li>
      			<li>
      				<a href="#" class="main-navigation_link">ФОТО И ВИДЕО</a>
      			</li>
      			<li>
-     				<a href="#" class="main-navigation_link">КАРТА ШТАТА</a>
+     				<a href="#map-of-sedona" class="main-navigation_link">КАРТА ШТАТА</a>
      			</li>
      			<li>
      				<a href="inner.html" class="main-navigation_link">ГОСТИНИЦЫ</a>
@@ -26,13 +32,22 @@
         </nav>
      		<div class="main-header_logo-container">
      			<a href="#" class="main-header_logo" title="Главная страница">
-                <object data="img/logo.svg" type="image/svg+xml" width="138" height="70" style="pointer-events: none;"></object>        
+                <object data="img/logo.svg" type="image/svg+xml" width="138" height="70" style="pointer-events: none;"></object>      
                 </a>
+                <button class="main-navigation_hamburger" id="hamb">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="22.928px" height="21.982px" viewBox="0 0 22.928 21.982" enable-background="new 0 0 22.928 21.982" xml:space="preserve" fill="currentColor">
+                        <g>
+                            <rect width="22.928" height="3.964" />
+                            <rect y="9.009" width="22.928" height="3.964" />
+                            <rect y="18.018" width="22.928" height="3.964" />
+                        </g>
+                    </svg>
+                </button>
      		</div>
      </header>
 
      <div class="intro">
-            <div class="intro__slogan">
+            <div class="intro_slogan">
                 <img src="img/text-intro_welcome_to.svg" class="intro_greating" alt="Добро пожаловать в джержеус">
                 <img src="img/text-intro_sedona.svg" class="intro_name" alt="Седона">
                 <img src="img/text-intro_because_the.svg" class="intro_caption" alt="Потому что Большой коньон отстой!">
@@ -47,10 +62,11 @@
      </section>
 
      <section class="hotels">
-     	<div class="hotels_shell">
-     		<div class="hotels_title-shell">
+     	<div class="hotels_wrap">
+     		<div class="hotels_title-wrapper">
      			<h1 class="hotels_title">ЗАИНТЕРЕСОВАЛИСЬ?</h1>
      			<p class="hotels_instruction">Укажите предполагаемые даты поездки и мы покажем вам лучшие предложения гостиниц в седоне</p>
+            </div>
      			<form class="search-form" action="inner.html" method="get">
                     <button class="search-form_btn-search" id="btn-search">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</button>
                     <div class="search-form_wrapper" id="search-hotels">
@@ -58,14 +74,44 @@
                             <label class="search-form_lab-label" for="date-lab">Дата заезда:</label>
                             <input id="date-lab" class="search-form_lab" type="text" placeholder="28 февраля 2019" required>
                             <button class="search-form_lab-calendar" id="lab-calendar">
-                                
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19.875px" height="21.916px" viewBox="0 0 19.875 21.916" enable-background="new 0 0 19.875 21.916" xml:space="preserve" fill="currentColor">
+                                    <g>
+                                        <path d="M17.04,2h-2.081V0h-2v2H6.917V0h-2v2H2.835C1.275,2,0,3.275,0,4.835v14.246c0,1.56,1.275,2.835,2.835,2.835H17.04
+                                c1.56,0,2.835-1.275,2.835-2.835V4.835C19.875,3.275,18.6,2,17.04,2z M17.875,19.081c0,0.453-0.383,0.835-0.835,0.835H2.835
+                                C2.383,19.916,2,19.534,2,19.081V4.835C2,4.382,2.383,4,2.835,4H17.04c0.452,0,0.835,0.382,0.835,0.835V19.081z" />
+                                        <rect x="4.917" y="6.958" width="2" height="2" />
+                                        <rect x="12.959" y="6.958" width="2" height="2" />
+                                        <rect x="8.938" y="6.958" width="2" height="2" />
+                                        <rect x="4.917" y="10.958" width="2" height="2" />
+                                        <rect x="12.959" y="10.958" width="2" height="2" />
+                                        <rect x="8.938" y="10.958" width="2" height="2" />
+                                        <rect x="4.917" y="14.942" width="2" height="2" />
+                                        <rect x="12.959" y="14.942" width="2" height="2" />
+                                        <rect x="8.938" y="14.942" width="2" height="2" />
+                                    </g>
+                                </svg>
                             </button>
                         </div>
                         <div class="search-form_exit-wrapper">
                             <label class="search-form_exit-label" for="date-exit">Дата Выезда:</label>
                             <input id="date-exit" class="search-form_exit" type="text" placeholder="3 марта 2019" required>
                             <button class="search-form_exit-calendar" id="exit-calendar">
-                                
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19.875px" height="21.916px" viewBox="0 0 19.875 21.916" enable-background="new 0 0 19.875 21.916" xml:space="preserve" fill="currentColor">
+                                    <g>
+                                        <path d="M17.04,2h-2.081V0h-2v2H6.917V0h-2v2H2.835C1.275,2,0,3.275,0,4.835v14.246c0,1.56,1.275,2.835,2.835,2.835H17.04
+                                c1.56,0,2.835-1.275,2.835-2.835V4.835C19.875,3.275,18.6,2,17.04,2z M17.875,19.081c0,0.453-0.383,0.835-0.835,0.835H2.835
+                                C2.383,19.916,2,19.534,2,19.081V4.835C2,4.382,2.383,4,2.835,4H17.04c0.452,0,0.835,0.382,0.835,0.835V19.081z" />
+                                        <rect x="4.917" y="6.958" width="2" height="2" />
+                                        <rect x="12.959" y="6.958" width="2" height="2" />
+                                        <rect x="8.938" y="6.958" width="2" height="2" />
+                                        <rect x="4.917" y="10.958" width="2" height="2" />
+                                        <rect x="12.959" y="10.958" width="2" height="2" />
+                                        <rect x="8.938" y="10.958" width="2" height="2" />
+                                        <rect x="4.917" y="14.942" width="2" height="2" />
+                                        <rect x="12.959" y="14.942" width="2" height="2" />
+                                        <rect x="8.938" y="14.942" width="2" height="2" />
+                                    </g>
+                                </svg>
                             </button>
                         </div>
                         <div class="search-form_visiters">
@@ -73,11 +119,15 @@
                                 <label for="adult" class="search-form_adult-label">Взрослые:</label>
                                 <div class="search-form_adult">
                                     <button id="adult-minus" class="search-form_adult-minus">
-                                        
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="9.917px" height="1.917px" viewBox="0 0 9.917 1.917" enable-background="new 0 0 9.917 1.917" xml:space="preserve" fill="currentColor">
+                                            <rect width="9.917" height="1.917" />
+                                        </svg>
                                     </button>
                                     <input id="adult" class="search-form_adult-counter" type="number" value="0" min="0">
                                     <button id="adult-plus" class="search-form_adult-plus">
-                                        
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="9.917px" height="9.917px" viewBox="0 0 9.917 9.917" enable-background="new 0 0 9.917 9.917" xml:space="preserve" fill="currentColor">
+                                            <polygon points="9.917,4 5.917,4 5.917,0 4,0 4,4 0,4 0,5.917 4,5.917 4,9.917 5.917,9.917 5.917,5.917 9.917,5.917 " />
+                                        </svg>
                                     </button>
                                 </div>
                             </div>
@@ -85,11 +135,15 @@
                                 <label for="kids" class="search-form_kids-label">Дети:</label>
                                 <div class="search-form_kids">
                                     <button id="kids-minus" class="search-form_kids-minus">
-                                        
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="9.917px" height="1.917px" viewBox="0 0 9.917 1.917" enable-background="new 0 0 9.917 1.917" xml:space="preserve" fill="currentColor">
+                                            <rect width="9.917" height="1.917" />
+                                        </svg>
                                     </button>
                                     <input id="kids" class="search-form_kids-counter" type="number" value="2" min="0">
                                     <button id="kids-plus" class="search-form_kids-plus">
-                                        
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="9.917px" height="9.917px" viewBox="0 0 9.917 9.917" enable-background="new 0 0 9.917 9.917" xml:space="preserve" fill="currentColor">
+                                            <polygon points="9.917,4 5.917,4 5.917,0 4,0 4,4 0,4 0,5.917 4,5.917 4,9.917 5.917,9.917 5.917,5.917 9.917,5.917 " />
+                                        </svg>
                                     </button>
                                 </div>
                             </div>
@@ -97,24 +151,57 @@
                         <button class="search-form_btn-find" id="btn-find" type="submit">НАЙТИ</button>
                     </div>
                 </form><!-- дальше должны идти форма и регистрация -->
-     		</div>
      	</div>
+        <div class="map" id="map-of-sedona">
+        </div>
      </section>
 
      <footer class="main-footer">
-     	<a href="#" class="main-footer_instagram" title="instagram">#visitSEDONA</a>
+     	<a href="https://www.instagram.com" class="main-footer_instagram" title="instagram">#visitSEDONA</a>
      	        <!-- Инстаграмм седонны -->
      	<div class="social-buttons">
-     		<a href="https://twitter.com" class="social-buttons_twitter" title="twitter">twiter</a>
-     		<a href="https://www.facebook.com" class="social-buttons_facebook" title="facebook">facebook</a>
-     		<a href="https://www.youtube.com" class="social-buttons_youtube" title="youtube">YT</a>
+     		<a href="https://twitter.com" class="social-buttons_twitter" title="twitter">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17.5px" height="14.663px" viewBox="0 0 17.5 14.663" enable-background="new 0 0 17.5 14.663" xml:space="preserve" fill="currentColor">
+                        <g>
+                            <g>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.283,0.153c1.736-0.484,3.074,0.264,3.685,1.15
+                            c0.694-0.225,1.372-0.47,2.072-0.69c-0.004,0.841-0.538,1.478-0.883,1.728C16.861,2.506,17.5,1.86,17.5,1.86
+                            c-0.175,0.977-1.035,1.746-1.611,1.977C15.65,10.429,12.617,14.793,5.507,14.66c-0.538,0,0.077,0-0.46,0
+                            c-0.422,0-4.29-0.45-5.047-1.843c2.341,0.192,4.011-0.412,4.835-1.15c-0.989-0.293-2.761-0.464-3.07-2.881
+                            c0.362,0.105,0.583,0.223,1.228,0.117C1.757,8.067,0.385,7.366,0.461,5.218c0.294,0.319,1.1,0.523,1.381,0.461
+                            c-0.725-0.235-2.03-3.281-0.921-4.836C2.794,2.655,4.769,4.364,8.29,4.528C8.506,2.288,9.461,0.788,11.283,0.153z" />
+                            </g>
+                        </g>
+                    </svg></a>
+     		<a href="https://www.facebook.com" class="social-buttons_facebook" title="facebook">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="8.672px" height="18.944px" viewBox="0 0 8.672 18.944" enable-background="new 0 0 8.672 18.944" xml:space="preserve" fill="currentColor">
+                        <path d="M6.275,3.356c0.799,0,1.599,0,2.398,0c0-1.119,0-2.237,0-3.356c-0.959,0-1.92,0-2.878,0C2.656,0.181,1.54,2.387,1.948,6.114
+                H0v3.518h1.959c0,3.104,0,6.208,0,9.312c1.279,0,2.559,0,3.837,0c0-3.104,0-6.208,0-9.312h2.857V6.114H5.787
+                C5.765,5.069,5.75,3.709,6.275,3.356z" />
+                    </svg>
+            </a>
+     		<a href="https://www.youtube.com" class="social-buttons_youtube" title="youtube">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19.979px" height="14.015px" viewBox="0 0 19.979 14.015" enable-background="new 0 0 19.979 14.015" xml:space="preserve" fill="currentColor">
+                        <path d="M17.145,0H2.835C1.275,0,0,1.275,0,2.835v8.345c0,1.56,1.275,2.835,2.835,2.835h14.31c1.56,0,2.835-1.275,2.835-2.835V2.835
+                C19.979,1.275,18.704,0,17.145,0z M7.036,10.392V3.623l6.769,3.384L7.036,10.392z" />
+                    </svg></a>
      	</div>
 
-     	<p class="footer-copyright">
-        <b>Разработано:</b> 
-        <a class="button" href="https://htmlacademy.ru">HTML Academy</a>   <!-- Взято с макета барбершопа -->
-      </p>
-
+     	<div class="main-footer_copyright">
+        <span class="main-footer_copyright-text">Web-site by</span>
+                <a href="https://htmlacademy.ru/" class="main-footer_copyright-rightholder">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.096px" height="33.803px" viewBox="0 0 26.096 33.803" enable-background="new 0 0 26.096 33.803" xml:space="preserve" fill="currentColor">
+                        <g>
+                            <path d="M13.047,0L0,1.456v24.475l13.047,7.835v0.037l13.049-7.872V1.557L13.047,0z M24.037,24.745l-10.989,6.622v-7.385
+                l-6.369-2.858v-0.021l6.373-2.816v-0.02h0.001v0.011l6.366,2.814v-0.006l0.01,0.006v-1.234l-6.366-2.813l-0.003,0.003l-0.007-0.003
+                v0.011h-0.001v-0.003L6.679,19.87v-1.235l0,0l5.848-2.584l-1.385-0.622l-4.463,1.973v-1.234l3.077-1.36l-1.385-0.622l-1.692,0.748
+                v-1.234l0.306-0.135l-3.73-1.674l9.793-4.248V2.084l10.989,1.321V24.745z" />
+                            <polygon points="19.428,17.389 14.958,15.414 13.57,16.035 19.428,18.624     " />
+                            <polygon points="19.428,14.921 17.734,14.172 16.346,14.793 19.428,16.155    " />
+                        </g>
+                    </svg>
+                </a>
+            </div>   <!-- Взято с макета барбершопа -->
      </footer>
   </body>
 </html>
