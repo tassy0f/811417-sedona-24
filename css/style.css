@@ -191,29 +191,6 @@ input {
 	color: #94b9d2;
 }
 
-.main-navigation_list > li:first-of-type .main-navigation_link {
-	border-top: none;
-}
-
-.main-navigation_list > li:last-of-type .main-navigation_link {
-	border-bottom: none;
-	background: url(../img/bg-menu__lower-border.svg) 50% 100% no-repeat;
-	background-size: 100%;
-}
-
-.main-navigation_list > li:last-of-type .main-navigation_link:hover {
-	background-color: #669ec0;
-	border-top-color: #86b2cd;
-	border-bottom-color: #ccc;
-}
-
-.main-navigation_list > li:last-of-type .main-navigation_link:active {
-	background-color: #5496bd;
-	border-top-color: #77acca;
-	border-bottom-color: #ccc;
-	color: #94b9d2;
-}
-
 .intro {
 	min-width: 320px;
 	height: 390px;

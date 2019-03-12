@@ -9,6 +9,12 @@
   <body>
      <header class="main-header">
      	<nav class="main-navigation"> <!--Навигация -->
+            <button class="main-navigation_toggle-close" id="cross">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="22.199px" height="22.199px" viewBox="0 0 22.199 22.199" enable-background="new 0 0 22.199 22.199" xml:space="preserve" fill="currentColor">
+                        <polygon points="22.199,2.804 19.396,0 11.1,8.297 2.804,0 0,2.803 8.297,11.1 0,19.396 2.803,22.199 11.1,13.902 19.396,22.199 
+                22.199,19.396 13.903,11.1 " />
+                    </svg>
+                </button>
      		<ul class="main-navigation_list">
      			<li>
      				<a href="#" class="main-navigation_link">ИНФОРМАЦИЯ</a>
@@ -17,21 +23,96 @@
      				<a href="#" class="main-navigation_link">ФОТО И ВИДЕО</a>
      			</li>
      			<li>
-     				<a href="#" class="main-navigation_link">КАРТА ШТАТА</a>
+     				<a href="#map-of-sedona" class="main-navigation_link">КАРТА ШТАТА</a>
      			</li>
      			<li>
-     				<a href="#" class="main-navigation_link">ГОСТИНИЦЫ</a>
+     				<a href="#" class="main-navigation_link active">ГОСТИНИЦЫ</a>
      			</li>
      		</ul>
-     		<div class="main-header_logo-container">
-     			<a href="#" class="main-header_logo" title="Главная страница"></a>
-     		</div>
      	</nav>
+        <div class="main-header_logo-container">
+                <a href="index.html" class="main-header_logo" title="Главная страница">
+                    <object data="img/logo.svg" type="image/svg+xml" width="138" height="70" style="pointer-events: none;"></object>
+                </a>
+                <button class="main-navigation_hamburger" id="hamb">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="22.928px" height="21.982px" viewBox="0 0 22.928 21.982" enable-background="new 0 0 22.928 21.982" xml:space="preserve" fill="currentColor">
+                        <g>
+                            <rect width="22.928" height="3.964" />
+                            <rect y="9.009" width="22.928" height="3.964" />
+                            <rect y="18.018" width="22.928" height="3.964" />
+                        </g>
+                    </svg>
+                </button>
+            </div>
      </header>
+
+     <div class="main-form">
+            <form class="main-form_search" action="#" method="get">
+                <fieldset class="main-form_comunication" name="comunication">
+                    <legend class="main-form_comunication-title">ИНФРАСТРУКТУРА:</legend>
+                    <div class="main-form_comunication-pool">
+                        <input class="main-form_comunication-pool-field" type="checkbox" id="pool" name="pool" checked>
+                        <label class="main-form_comunication-pool-label" for="pool">БАССЕЙН</label>
+                    </div>
+                    <div class="main-form_comunication-parking">
+                        <input class="main-form_comunication-parking-field" type="checkbox" id="parking" name="parking">
+                        <label class="main-form_comunication-parking-label" for="parking">ПАРКОВКА</label>
+                    </div>
+                    <div class="main-form_comunication-wi-fi">
+                        <input class="main-form_comunication-wi-fi-field" type="checkbox" id="wi-fi" name="wi-fi">
+                        <label class="main-form_comunication-wi-fi-label" for="wi-fi">Wi-Fi</label>
+                    </div>
+                </fieldset>
+                <fieldset class="main-form_habitation" name="habitation">
+                    <legend class="main-form_habitation-title">Тип жилья:</legend>
+                    <div class="main-form_habitation-hotel">
+                        <input class="main-form_habitation-hotel-field" type="checkbox" id="hotel" name="hotel" checked>
+                        <label class="main-form_habitation-hotel-label" for="hotel">ГостиницА</label>
+                    </div>
+                    <div class="main-form_habitation-motel">
+                        <input class="main-form_habitation-motel-field" type="checkbox" id="motel" name="motel" checked>
+                        <label class="main-form_habitation-motel-label" for="motel">МОТЕЛЬ</label>
+                    </div>
+                    <div class="main-form_habitation-apartments">
+                        <input class="main-form_habitation-apartments-field" type="checkbox" id="apartments" name="apartments" checked>
+                        <label class="main-form_habitation-apartments-label" for="apartments">АПАРТАМЕНТЫ</label>
+                    </div>
+                </fieldset>
+                <fieldset class="main-form_price" name="price">
+                    <legend class="main-form_price-title">Стоимость в сутки (Р):</legend>
+                    <label for="price-min" class="main-form_price-min-label">от</label>
+                    <input class="main-form_price-min" type="number" name="min" id="price-min" value="0" min="0" max="3649">
+                    <label for="price-max" class="main-form_price-max-label">до</label>
+                    <input class="main-form_price-max" type="number" name="max" id="price-max" value="3000" min="1" max="3650">
+                    <div class="main-form_price-range" id="double-slider">
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <div class="sorter">
+            <form class="sorter_form" action="#" method="get">
+                <fieldset class="sorter_variants" name="sorter-variants">
+                    <label class="sorter_sum-label" for="sum">Найдено:</label>
+                    <input class="sorter_sum" id="sum" name="sum" type="number" value="3" min="0" disabled>
+                    <span class="sorter_text">СОРТИРОВКА:</span>
+                    <input class="sorter_price" id="price" type="radio" name="sort_type" checked>
+                    <label class="sorter_price-label" for="price">ПО ЦЕНЕ</label>
+                    <input class="sorter_type" id="type" type="radio" name="sort_type">
+                    <label class="sorter_type-label" for="type">ПО ТИПУ</label>
+                    <input class="sorter_rate" id="rate" type="radio" name="sort_type">
+                    <label class="sorter_rate-label" for="rate">ПО РЕЙТИНГУ</label>
+                </fieldset>
+                <fieldset class="sorter_direction" name="sorter-direction">
+                    <input class="sorter_ascending" id="ascending" type="radio" name="direction" value="1" checked>
+                    <label class="sorter_ascending-label" for="ascending"></label>
+                    <input class="sorter_descending" id="descending" type="radio" name="direction" value="0">
+                    <label class="sorter_descending-label" for="descending"></label>
+                </fieldset>
+            </form>
 
      <div class="sorter_result">
         <article class="proposal">
-            <!-- img src="фото данного предложения" -->
+            <img src="img/hotel1.jpg" class="proposal_photo" width="135" height="90" alt="фото данного предложения">
             <div class="proposal_content">
                 <h2 class="proposal_title">Amara Resort & Spa</h2>
                 <span class="proposal_type">Гостиница</span>
@@ -41,14 +122,17 @@
              </div>
              <div class="proposal_rate">
                 <div class="proposal_stars">
-                    <!-- 4 звездочки -->
+                    <img class="proposal_star" src="img/star.svg" alt="звезда" width="18" height="18">
+                    <img class="proposal_star" src="img/star.svg" alt="звезда" width="18" height="18">
+                    <img class="proposal_star" src="img/star.svg" alt="звезда" width="18" height="18">
+                    <img class="proposal_star" src="img/star.svg" alt="звезда" width="18" height="18">
                 </div>
              </div>
              <span class="proposal_rating">Рейтинг: 8,5</span>
          </article>
 
          <article class="proposal">
-            <!-- img src="фото данного предложения" -->
+            <img src="img/hotel2.jpg" class="proposal_photo" width="135" height="90" alt="фото данного предложения">
             <div class="proposal_content">
                 <h2 class="proposal_title">Desert Quail Inn</h2>
                 <span class="proposal_type">Мотель</span>
@@ -58,14 +142,16 @@
              </div>
              <div class="proposal_rate">
                 <div class="proposal_stars">
-                    <!-- 3 звездочки -->
+                    <img class="proposal_star" src="img/star.svg" alt="звезда" width="18" height="18">
+                    <img class="proposal_star" src="img/star.svg" alt="звезда" width="18" height="18">
+                    <img class="proposal_star" src="img/star.svg" alt="звезда" width="18" height="18">
                 </div>
              </div>
              <span class="proposal_rating">Рейтинг: 8,9</span>
          </article>
          
           <article class="proposal">
-            <!-- img src="фото данного предложения" -->
+            <img src="img/hotel3.jpg" class="proposal_photo" width="135" height="90" alt="фото данного предложения">
             <div class="proposal_content">
                 <h2 class="proposal_title">Villas at Poco Diablo</h2>
                 <span class="proposal_type">Апартаменты</span>
@@ -75,27 +161,57 @@
              </div>
              <div class="proposal_rate">
                 <div class="proposal_stars">
-                    <!-- 2 звездочки -->
+                    <img class="proposal_star" src="img/star.svg" alt="звезда" width="18" height="18">
+                    <img class="proposal_star" src="img/star.svg" alt="звезда" width="18" height="18">
                 </div>
              </div>
              <span class="proposal_rating">Рейтинг: 9,2</span>
          </article> 
      <footer class="main-footer">
-        <a href="#" class="main-footer_instagram" title="instagram">#visitSEDONA</a>
-                <!-- Инстаграмм седонны -->
+        <a href="https://www.instagram.com" class="main-footer_instagram" title="instagram">#visitSEDONA</a>
         <div class="social-buttons">
-            <a href="https://twitter.com" class="social-buttons_twitter" title="twitter">twiter</a>
-            <a href="https://www.facebook.com" class="social-buttons_facebook" title="facebook">facebook</a>
-            <a href="https://www.youtube.com" class="social-buttons_youtube" title="youtube">YT</a>
+            <a href="https://twitter.com" class="social-buttons_twitter" title="twitter">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17.5px" height="14.663px" viewBox="0 0 17.5 14.663" enable-background="new 0 0 17.5 14.663" xml:space="preserve" fill="currentColor">
+                        <g>
+                            <g>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.283,0.153c1.736-0.484,3.074,0.264,3.685,1.15
+                            c0.694-0.225,1.372-0.47,2.072-0.69c-0.004,0.841-0.538,1.478-0.883,1.728C16.861,2.506,17.5,1.86,17.5,1.86
+                            c-0.175,0.977-1.035,1.746-1.611,1.977C15.65,10.429,12.617,14.793,5.507,14.66c-0.538,0,0.077,0-0.46,0
+                            c-0.422,0-4.29-0.45-5.047-1.843c2.341,0.192,4.011-0.412,4.835-1.15c-0.989-0.293-2.761-0.464-3.07-2.881
+                            c0.362,0.105,0.583,0.223,1.228,0.117C1.757,8.067,0.385,7.366,0.461,5.218c0.294,0.319,1.1,0.523,1.381,0.461
+                            c-0.725-0.235-2.03-3.281-0.921-4.836C2.794,2.655,4.769,4.364,8.29,4.528C8.506,2.288,9.461,0.788,11.283,0.153z" />
+                            </g>
+                        </g>
+                    </svg></a>
+            <a href="https://www.facebook.com" class="social-buttons_facebook" title="facebook">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="8.672px" height="18.944px" viewBox="0 0 8.672 18.944" enable-background="new 0 0 8.672 18.944" xml:space="preserve" fill="currentColor">
+                        <path d="M6.275,3.356c0.799,0,1.599,0,2.398,0c0-1.119,0-2.237,0-3.356c-0.959,0-1.92,0-2.878,0C2.656,0.181,1.54,2.387,1.948,6.114
+                H0v3.518h1.959c0,3.104,0,6.208,0,9.312c1.279,0,2.559,0,3.837,0c0-3.104,0-6.208,0-9.312h2.857V6.114H5.787
+                C5.765,5.069,5.75,3.709,6.275,3.356z" />
+                    </svg>
+            </a>
+            <a href="https://www.youtube.com" class="social-buttons_youtube" title="youtube">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19.979px" height="14.015px" viewBox="0 0 19.979 14.015" enable-background="new 0 0 19.979 14.015" xml:space="preserve" fill="currentColor">
+                        <path d="M17.145,0H2.835C1.275,0,0,1.275,0,2.835v8.345c0,1.56,1.275,2.835,2.835,2.835h14.31c1.56,0,2.835-1.275,2.835-2.835V2.835
+                C19.979,1.275,18.704,0,17.145,0z M7.036,10.392V3.623l6.769,3.384L7.036,10.392z" />
+                    </svg></a>
         </div>
 
-        <p class="footer-copyright">
-        <b>Разработано:</b> 
-        <a class="button" href="https://htmlacademy.ru">HTML Academy</a>   <!-- Взято с макета барбершопа -->
-      </p>
-
-     </footer>
-
-     
+        <div class="main-footer_copyright">
+        <span class="main-footer_copyright-text">Web-site by</span>
+                <a href="https://htmlacademy.ru/intensive/htmlcss" class="main-footer_copyright-rightholder">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.096px" height="33.803px" viewBox="0 0 26.096 33.803" enable-background="new 0 0 26.096 33.803" xml:space="preserve" fill="currentColor">
+                        <g>
+                            <path d="M13.047,0L0,1.456v24.475l13.047,7.835v0.037l13.049-7.872V1.557L13.047,0z M24.037,24.745l-10.989,6.622v-7.385
+                l-6.369-2.858v-0.021l6.373-2.816v-0.02h0.001v0.011l6.366,2.814v-0.006l0.01,0.006v-1.234l-6.366-2.813l-0.003,0.003l-0.007-0.003
+                v0.011h-0.001v-0.003L6.679,19.87v-1.235l0,0l5.848-2.584l-1.385-0.622l-4.463,1.973v-1.234l3.077-1.36l-1.385-0.622l-1.692,0.748
+                v-1.234l0.306-0.135l-3.73-1.674l9.793-4.248V2.084l10.989,1.321V24.745z" />
+                            <polygon points="19.428,17.389 14.958,15.414 13.57,16.035 19.428,18.624     " />
+                            <polygon points="19.428,14.921 17.734,14.172 16.346,14.793 19.428,16.155    " />
+                        </g>
+                    </svg>
+                </a>
+            </div> 
+     </footer>   
   </body>
 </html>

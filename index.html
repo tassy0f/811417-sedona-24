@@ -9,12 +9,12 @@
   <body>
      <header class="main-header">
      	<nav class="main-navigation" id="main-nav"> <!--Навигация -->
-            <button class="main-navigation_togle-close" id="cross">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="22.199px" height="22.199px" viewBox="0 0 22.199 22.199" enable-background="new 0 0 22.199 22.199" xml:space="preserve" fill="currentColor">
+            <button class="main-navigation_toggle-close" id="cross">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="22.199px" height="22.199px" viewBox="0 0 22.199 22.199" enable-background="new 0 0 22.199 22.199" xml:space="preserve" fill="currentColor">
                         <polygon points="22.199,2.804 19.396,0 11.1,8.297 2.804,0 0,2.803 8.297,11.1 0,19.396 2.803,22.199 11.1,13.902 19.396,22.199 
                 22.199,19.396 13.903,11.1 " />
-                </svg>
-            </button>
+                    </svg>
+                </button>
      		<ul class="main-navigation_list" id="main-nav">
      			<li>
      				<a href="#" class="main-navigation_link active">ИНФОРМАЦИЯ</a>
@@ -31,8 +31,8 @@
      		</ul>
         </nav>
      		<div class="main-header_logo-container">
-     			<a href="#" class="main-header_logo" title="Главная страница">
-                <object data="img/logo.svg" type="image/svg+xml" width="138" height="70" style="pointer-events: none;"></object>      
+                <a href="#" class="main-header_logo" title="Главная страница">
+                    <object data="img/logo.svg" type="image/svg+xml" width="138" height="70" style="pointer-events: none;"></object>
                 </a>
                 <button class="main-navigation_hamburger" id="hamb">
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="22.928px" height="21.982px" viewBox="0 0 22.928 21.982" enable-background="new 0 0 22.928 21.982" xml:space="preserve" fill="currentColor">
@@ -43,7 +43,7 @@
                         </g>
                     </svg>
                 </button>
-     		</div>
+            </div>
      </header>
 
      <div class="intro">
@@ -54,12 +54,69 @@
             </div>
         </div>
 
-     <section class="main-contant"> <!-- введение -->
-     	<div class="main-contant_introduction">
-     		<h1 class="main-contant_title">СЕДОНА — небольшой городок в АРИЗОНЕ, заслуживающий большего!</h1>
-			<p class="main-contant_intro">Рассмотрим 5 причин, по которым Седона круче чем гранд каньон!</p>
-     	</div>
-     </section>
+     <section class="main-contant">
+            <div class="main-contant_introduction">
+                <h1 class="main-contant_title">СЕДОНА — небольшой городок в АРИЗОНЕ, заслуживающий большего!</h1>
+                <p class="main-contant_intro">Рассмотрим 5 причин, по которым Седона круче чем гранд каньон!</p>
+            </div>
+            <div class="main-contant_first-reason">
+                <div class="main-contant_first-reason-info">
+                    <h2 class="main-contant_first-reason-title">НАСТОЯЩИЙ ГОРОДОК</h2>
+                    <span class="main-contant_first-reason-number">— №1 —</span>
+                    <p class="main-contant_first-reason-content">СЕДОНА НЕ АТРАКЦИОН ДЛЯ ТУРИСТОВ, ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ</p>
+                </div>
+                <div class="main-contant_first-reason-image">
+                    <picture>
+                        <source srcset="img/retina/photo-city@2x.jpg 2x">
+                        <img src="img/retina/photo-city@1x.jpg" alt="Open range - ресторан">
+                    </picture>
+                </div>
+            </div>
+            <div class="main-contant_offers">
+                <div class="main-contant_lodging">
+                    <h2 class="main-contant_lodging-title">Жилье</h2>
+                    <p class="main-contant_lodging-content">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+                </div>
+                <div class="main-contant_food">
+                    <h2 class="main-contant_food-title">ЕДА</h2>
+                    <p class="main-contant_food-content">Всегда заказывай ФИРМЕННЫЙ БУРГЕР, Вы НЕ разочаруетесь!</p>
+                </div>
+                <div class="main-contant_souvenirs">
+                    <h2 class="main-contant_souvenirs-title">СУВЕНИРЫ</h2>
+                    <p class="main-contant_souvenirs-content">Не только китайского, но и местного производства!</p>
+                </div>
+            </div>
+            <div class="main-contant_second-reason">
+                <div class="main-contant_second-reason-info">
+                    <h2 class="main-contant_second-reason-title">ТАМ ЕСТЬ Мост дьявола</h2>
+                    <span class="main-contant_second-reason-number">— №2 —</span>
+                    <p class="main-contant_second-reason-content">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+                </div>
+                <div class="main-contant_second-reason-image">
+                    <picture>
+                        <source srcset="img/retina/photo-bridge@2x.jpg 2x">
+                        <img src="img/retina/photo-bridge@1x.jpg" alt="Каньены в близи Седоны">
+                    </picture>
+                </div>
+            </div>
+            <div class="main-contant_reasons">
+                <div class="main-contant_3-reason">
+                    <h2 class="main-contant_3-reason-title">НЕБОЛЬШАЯ ПЛОЩАДЬ</h2>
+                    <span class="main-contant_3-reason-number">— №3 —</span>
+                    <p class="main-contant_3-reason-content">ВСЕ достопримечательности находятся очень близко</p>
+                </div>
+                <div class="main-contant_4-reason">
+                    <h2 class="main-contant_4-reason-title">КРАСИВАЯ ДОРОГА</h2>
+                    <span class="main-contant_4-reason-number">— №4 —</span>
+                    <p class="main-contant_4-reason-content">ЕХАТЬ В СЕДОНУ ИЗ ЛАС-ВЕГАСА совсем НЕ СКУЧНО!</p>
+                </div>
+                <div class="main-contant_5-reason">
+                    <h2 class="main-contant_5-reason-title">МАЛО ТУРИСТОВ</h2>
+                    <span class="main-contant_5-reason-number">— №5 —</span>
+                    <p class="main-contant_5-reason-content">Большинство едет в гранд каньон и толпится там</p>
+                </div>
+            </div>
+        </section>
 
      <section class="hotels">
      	<div class="hotels_wrap">
@@ -189,7 +246,7 @@
 
      	<div class="main-footer_copyright">
         <span class="main-footer_copyright-text">Web-site by</span>
-                <a href="https://htmlacademy.ru/" class="main-footer_copyright-rightholder">
+                <a href="https://htmlacademy.ru/intensive/htmlcss" class="main-footer_copyright-rightholder">
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.096px" height="33.803px" viewBox="0 0 26.096 33.803" enable-background="new 0 0 26.096 33.803" xml:space="preserve" fill="currentColor">
                         <g>
                             <path d="M13.047,0L0,1.456v24.475l13.047,7.835v0.037l13.049-7.872V1.557L13.047,0z M24.037,24.745l-10.989,6.622v-7.385
