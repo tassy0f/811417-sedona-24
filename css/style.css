@@ -1127,7 +1127,7 @@ input {
 }
 
 .main-form_comunication-pool {
-	margin-bottom: 18px;
+	margin-bottom: 25px;
 }
 
 .main-form_comunication-pool-field {
@@ -1175,7 +1175,7 @@ input {
 }
 
 .main-form_comunication-parking {
-	margin-bottom: 18px;
+	margin-bottom: 25px;
 }
 
 .main-form_comunication-parking-field {
@@ -1223,7 +1223,7 @@ input {
 }
 
 .main-form_comunication-wi-fi {
-	margin-bottom: 18px;
+	margin-bottom: 25px;
 }
 
 .main-form_comunication-wi-fi-field {
@@ -1277,7 +1277,7 @@ input {
 }
 
 .main-form_habitation-hotel {
-	margin-bottom: 18px;
+	margin-bottom: 25px;
 }
 
 .main-form_habitation-hotel-field {
@@ -1325,7 +1325,7 @@ input {
 }
 
 .main-form_habitation-motel {
-	margin-bottom: 18px;
+	margin-bottom: 25px;
 }
 
 .main-form_habitation-motel-field {
@@ -1373,7 +1373,7 @@ input {
 }
 
 .main-form_habitation-apartments {
-	margin-bottom: 18px;
+	margin-bottom: 25px;
 }
 
 .main-form_habitation-apartments-field {
@@ -1478,6 +1478,27 @@ input {
 	width: 2px;
 	height: 26px;
 	background-color: #fff;
+}
+
+.show-button {
+   width: 140px;
+   margin-top: 60px;
+   margin-left: 80px;
+   margin-bottom: 0px;
+   background-color: transparent;
+   border: 2px solid #fff;
+   text-align: center;
+   padding-top: 5px;
+   padding-bottom: 5px;
+}
+
+.show-button:hover {
+	background-color: rgba(255,255,255,40%);
+}
+
+.show-button:active {
+	color: #000000;
+	background-color: rgba(255,255,255,100%);
 }
 
 .sorter {
