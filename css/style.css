@@ -2527,11 +2527,17 @@ input {
 	}
 
 	.proposal_rating {
-		height: 27px;
-		text-align: center;
-		color: #666;
-		background-color: #f2f2f2;
-	}
+  margin-top: 60px;
+  width: 110px;
+  height: 26px;
+  box-sizing: border-box;
+
+  background-color: #f2f2f2;
+  color: #666666;
+  text-align: center;
+  position: absolute;
+  right: 400px;
+}
 
 	.main-footer {
 		min-width: 768px;
