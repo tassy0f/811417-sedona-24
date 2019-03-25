@@ -1482,7 +1482,7 @@ input {
 
 .show-button {
    width: 140px;
-   margin-top: 60px;
+   margin-top: 20px;
    margin-left: 80px;
    margin-bottom: 0px;
    background-color: transparent;
@@ -2520,10 +2520,7 @@ input {
 		-webkit-flex-direction: row-reverse;
 		    -ms-flex-direction: row-reverse;
 		        flex-direction: row-reverse;
-	}
 
-	.proposal_star {
-		width: 22px;
 	}
 
 	.proposal_rating {
@@ -2534,9 +2531,7 @@ input {
 
   background-color: #f2f2f2;
   color: #666666;
-  text-align: center;
-  position: absolute;
-  right: 400px;
+  text-align: center;  
 }
 
 	.main-footer {

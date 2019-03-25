@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>Седона</title>
-     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-     <header class="main-header">
+    <header class="main-header">
      	<nav class="main-navigation"> <!--Навигация -->
             
      		<ul class="main-navigation_list">
@@ -26,25 +26,25 @@
      		</ul>
      	</nav>
         <div class="main-header_logo-container">
-                <a href="index.html" class="main-header_logo" title="Главная страница">
-                    <object data="img/logo.svg" type="image/svg+xml" width="138" height="70" style="pointer-events: none;"></object>
-                </a>
-                <button class="main-navigation_hamburger" id="hamb">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="22.928px" height="21.982px" viewBox="0 0 22.928 21.982" enable-background="new 0 0 22.928 21.982" xml:space="preserve" fill="currentColor">
-                        <g>
-                            <rect width="22.928" height="3.964" />
-                            <rect y="9.009" width="22.928" height="3.964" />
-                            <rect y="18.018" width="22.928" height="3.964" />
-                        </g>
-                    </svg>
-                </button>
-            </div>
-     </header>
+            <a href="index.html" class="main-header_logo" title="Главная страница">
+                <img src="img/logo.svg" width="138" height="70"></img>
+            </a>
+            <button class="main-navigation_hamburger" id="hamb">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="22.928px" height="21.982px" viewBox="0 0 22.928 21.982" enable-background="new 0 0 22.928 21.982" xml:space="preserve" fill="currentColor">
+                    <g>
+                        <rect width="22.928" height="3.964" />
+                        <rect y="9.009" width="22.928" height="3.964" />
+                        <rect y="18.018" width="22.928" height="3.964" />
+                    </g>
+                </svg>
+            </button>
+        </div>
+    </header>
 
-     <div class="main-form">
-            <form class="main-form_search" action="#" method="get">
-                <fieldset class="main-form_comunication" name="comunication">
-                    <legend class="main-form_comunication-title">ИНФРАСТРУКТУРА:</legend>
+    <div class="main-form">
+        <form class="main-form_search" action="#" method="get">
+            <fieldset class="main-form_comunication" name="comunication">
+                <legend class="main-form_comunication-title">ИНФРАСТРУКТУРА:</legend>
                     <div class="main-form_comunication-pool">
                         <input class="main-form_comunication-pool-field" type="checkbox" id="pool" name="pool" checked>
                         <label class="main-form_comunication-pool-label" for="pool">БАССЕЙН</label>
@@ -57,9 +57,9 @@
                         <input class="main-form_comunication-wi-fi-field" type="checkbox" id="wi-fi" name="wi-fi">
                         <label class="main-form_comunication-wi-fi-label" for="wi-fi">Wi-Fi</label>
                     </div>
-                </fieldset>
-                <fieldset class="main-form_habitation" name="habitation">
-                    <legend class="main-form_habitation-title">Тип жилья:</legend>
+            </fieldset>
+            <fieldset class="main-form_habitation" name="habitation">
+                <legend class="main-form_habitation-title">Тип жилья:</legend>
                     <div class="main-form_habitation-hotel">
                         <input class="main-form_habitation-hotel-field" type="checkbox" id="hotel" name="hotel" checked>
                         <label class="main-form_habitation-hotel-label" for="hotel">Гостиница</label>
@@ -72,17 +72,18 @@
                         <input class="main-form_habitation-apartments-field" type="checkbox" id="apartments" name="apartments" checked>
                         <label class="main-form_habitation-apartments-label" for="apartments">АПАРТАМЕНТЫ</label>
                     </div>
-                </fieldset>
-                <fieldset class="main-form_price" name="price">
-                    <legend class="main-form_price-title">Стоимость в сутки (Р):</legend>
+            </fieldset>
+            <fieldset class="main-form_price" name="price">
+                <legend class="main-form_price-title">Стоимость в сутки (Р):</legend>
                     <label for="price-min" class="main-form_price-min-label">от</label>
                     <input class="main-form_price-min" type="number" name="min" id="price-min" value="0" min="0" max="3649">
                     <label for="price-max" class="main-form_price-max-label">до</label>
                     <input class="main-form_price-max" type="number" name="max" id="price-max" value="3000" min="1" max="3650">
-                    <input type="submit" class="show-button" name="show" value="ПОКАЗАТЬ">
-                </fieldset>
-            </form>
-        </div>
+                    <div class="main-form_price-range" id="double-slider">
+                    <input type="submit" class="show-button" name="show" value="ПОКАЗАТЬ"> 
+            </fieldset>
+        </form>
+    </div>
         <div class="sorter">
             <form class="sorter_form" action="#" method="get">
                 <fieldset class="sorter_variants" name="sorter-variants">
@@ -103,13 +104,13 @@
                     <label class="sorter_descending-label" for="descending"></label>
                 </fieldset>
             </form>
-        </div>
+    </div>
 
-     <div class="sorter_result">
+    <div class="sorter_result">
         <article class="proposal">
             <img src="img/hotel1.jpg" class="proposal_photo" width="135" height="90" alt="фото данного предложения">
             <div class="proposal_content">
-                <h2 class="proposal_title">Amara Resort & Spa</h2>
+                <a href="https://www.amararesort.com/" class="proposal_title">Amara Resort & Spa</a>
                 <span class="proposal_type">Гостиница</span>
                 <span class="proposal_price">ОТ 3500 Р.</span>
                 <a href="#" class="proposal_info">ПОДРОБНЕЕ</a>
@@ -117,80 +118,84 @@
              </div>
              <div class="proposal_rate">
                 <div class="proposal_stars">
-                    <img class="proposal_star" src="img/star.svg" alt="звезда" width="18" height="18">
-                    <img class="proposal_star" src="img/star.svg" alt="звезда" width="18" height="18">
-                    <img class="proposal_star" src="img/star.svg" alt="звезда" width="18" height="18">
-                    <img class="proposal_star" src="img/star.svg" alt="звезда" width="18" height="18">
+                    <img src="img/star.svg" alt="звезда" width="22" height="18">
+                    <img src="img/star.svg" alt="звезда" width="22" height="18">
+                    <img src="img/star.svg" alt="звезда" width="22" height="18">
+                    <img src="img/star.svg" alt="звезда" width="22" height="18">
                 </div>
              </div>
              <span class="proposal_rating">Рейтинг: 8,5</span>
-         </article>
+        </article>
 
-         <article class="proposal">
+        <article class="proposal">
             <img src="img/hotel2.jpg" class="proposal_photo" width="135" height="90" alt="фото данного предложения">
             <div class="proposal_content">
-                <h2 class="proposal_title">Desert Quail Inn</h2>
+                <a href="https://www.desertquailinn.com/" class="proposal_title">Desert Quail Inn</a>
+                
                 <span class="proposal_type">Мотель</span>
                 <span class="proposal_price">ОТ 2000 Р.</span>
                 <a href="#" class="proposal_info">ПОДРОБНЕЕ</a>
                 <a href="#" class="proposal_reserving">ЗАБРОНИРОВАТЬ</a>
-             </div>
-             <div class="proposal_rate">
+            </div>
+            <div class="proposal_rate">
                 <div class="proposal_stars">
-                    <img class="proposal_star" src="img/star.svg" alt="звезда" width="18" height="18">
-                    <img class="proposal_star" src="img/star.svg" alt="звезда" width="18" height="18">
-                    <img class="proposal_star" src="img/star.svg" alt="звезда" width="18" height="18">
+                    <img src="img/star.svg" alt="звезда" width="22" height="18">
+                    <img src="img/star.svg" alt="звезда" width="22" height="18">
+                    <img src="img/star.svg" alt="звезда" width="22" height="18">
                 </div>
-             </div>
-             <span class="proposal_rating">Рейтинг: 8,9</span>
-         </article>
+            </div>
+          <span class="proposal_rating">Рейтинг: 8,9</span>
+        </article>
          
-          <article class="proposal">
+        <article class="proposal">
             <img src="img/hotel3.jpg" class="proposal_photo" width="135" height="90" alt="фото данного предложения">
             <div class="proposal_content">
-                <h2 class="proposal_title">Villas at Poco Diablo</h2>
+                <a href="https://villasatpocodiablo.com/" class="proposal_title">Villas at Poco Diablo</a>
                 <span class="proposal_type">Апартаменты</span>
                 <span class="proposal_price">ОТ 4000 Р.</span>
                 <a href="#" class="proposal_info">ПОДРОБНЕЕ</a>
                 <a href="#" class="proposal_reserving">ЗАБРОНИРОВАТЬ</a>
-             </div>
-             <div class="proposal_rate">
+            </div>
+            <div class="proposal_rate">
                 <div class="proposal_stars">
-                    <img class="proposal_star" src="img/star.svg" alt="звезда" width="18" height="18">
-                    <img class="proposal_star" src="img/star.svg" alt="звезда" width="18" height="18">
+                    <img src="img/star.svg" alt="звезда" width="22" height="18">
+                    <img src="img/star.svg" alt="звезда" width="22" height="18">
                 </div>
-             </div>
-             <span class="proposal_rating">Рейтинг: 9,2</span>
-         </article>
-      </div> 
-     <footer class="main-footer">
+            </div>
+          <span class="proposal_rating">Рейтинг: 9,2</span>
+        </article>
+    </div> 
+
+    <footer class="main-footer">
         <a href="https://www.instagram.com" class="main-footer_instagram" title="instagram">#visitSEDONA</a>
         <div class="social-buttons">
             <a href="https://twitter.com" class="social-buttons_twitter" title="twitter">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17.5px" height="14.663px" viewBox="0 0 17.5 14.663" enable-background="new 0 0 17.5 14.663" xml:space="preserve" fill="currentColor">
+                    <g>
                         <g>
-                            <g>
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.283,0.153c1.736-0.484,3.074,0.264,3.685,1.15
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M11.283,0.153c1.736-0.484,3.074,0.264,3.685,1.15
                             c0.694-0.225,1.372-0.47,2.072-0.69c-0.004,0.841-0.538,1.478-0.883,1.728C16.861,2.506,17.5,1.86,17.5,1.86
                             c-0.175,0.977-1.035,1.746-1.611,1.977C15.65,10.429,12.617,14.793,5.507,14.66c-0.538,0,0.077,0-0.46,0
                             c-0.422,0-4.29-0.45-5.047-1.843c2.341,0.192,4.011-0.412,4.835-1.15c-0.989-0.293-2.761-0.464-3.07-2.881
                             c0.362,0.105,0.583,0.223,1.228,0.117C1.757,8.067,0.385,7.366,0.461,5.218c0.294,0.319,1.1,0.523,1.381,0.461
                             c-0.725-0.235-2.03-3.281-0.921-4.836C2.794,2.655,4.769,4.364,8.29,4.528C8.506,2.288,9.461,0.788,11.283,0.153z" />
-                            </g>
                         </g>
-                    </svg></a>
+                    </g>
+                </svg>
+            </a>
             <a href="https://www.facebook.com" class="social-buttons_facebook" title="facebook">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="8.672px" height="18.944px" viewBox="0 0 8.672 18.944" enable-background="new 0 0 8.672 18.944" xml:space="preserve" fill="currentColor">
                         <path d="M6.275,3.356c0.799,0,1.599,0,2.398,0c0-1.119,0-2.237,0-3.356c-0.959,0-1.92,0-2.878,0C2.656,0.181,1.54,2.387,1.948,6.114
                 H0v3.518h1.959c0,3.104,0,6.208,0,9.312c1.279,0,2.559,0,3.837,0c0-3.104,0-6.208,0-9.312h2.857V6.114H5.787
                 C5.765,5.069,5.75,3.709,6.275,3.356z" />
-                    </svg>
+                </svg>
             </a>
             <a href="https://www.youtube.com" class="social-buttons_youtube" title="youtube">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19.979px" height="14.015px" viewBox="0 0 19.979 14.015" enable-background="new 0 0 19.979 14.015" xml:space="preserve" fill="currentColor">
                         <path d="M17.145,0H2.835C1.275,0,0,1.275,0,2.835v8.345c0,1.56,1.275,2.835,2.835,2.835h14.31c1.56,0,2.835-1.275,2.835-2.835V2.835
                 C19.979,1.275,18.704,0,17.145,0z M7.036,10.392V3.623l6.769,3.384L7.036,10.392z" />
-                    </svg></a>
+                </svg>
+            </a>
         </div>
 
         <div class="main-footer_copyright">
@@ -207,7 +212,13 @@
                         </g>
                     </svg>
                 </a>
-            </div> 
-     </footer>   
+        </div> 
+    </footer> 
+
+    <script src="js/jquery-2.2.3.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/modernizr-custom.js"></script>
+    <script src="js/script.min.js"></script>  
+
   </body>
 </html>
