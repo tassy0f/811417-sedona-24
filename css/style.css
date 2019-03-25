@@ -169,13 +169,14 @@ input {
 	box-sizing: border-box;
 	min-height: 56px;
 	background-color: #81b3d2;
-	text-align: center;
 	font-size: 18px;
 	line-height: 54px;
 	font-weight: 700;
 	text-transform: uppercase;
 	border-top: 1px solid #9ac2db;
 	border-bottom: 1px solid #678fa8;
+	padding-left: 70px;
+	padding-right: 70px;
 }
 
 .main-navigation_link:hover {
@@ -2476,7 +2477,7 @@ input {
 	.proposal_content {
 		padding-left: 31px;
 		margin: 0;
-		height: auto;
+		
 	}
 
 	.proposal_title {
@@ -2489,6 +2490,7 @@ input {
 
 	.proposal_price {
 		left: 147px;
+		bottom: 20px;
 	}
 
 	.proposal_info {
@@ -2510,17 +2512,13 @@ input {
 		-ms-flex-pack: justify;
 		        justify-content: space-between;
 		margin-left: auto;
-		width: 110px;
+		
 	}
 
 	.proposal_stars {
-		display: -webkit-flex;
-		display: -ms-flexbox;
-		display:         flex;
-		-webkit-flex-direction: row-reverse;
-		    -ms-flex-direction: row-reverse;
-		        flex-direction: row-reverse;
-
+		margin-top: 0px;
+		position: relative;
+		left: 110px;
 	}
 
 	.proposal_rating {
